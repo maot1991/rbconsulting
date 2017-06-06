@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf + Spring Security</title>
+
+    <div th:replace="fragments/header :: header-css"/>
+    <div th:replace="fragments/footer :: footer-css"/>
+
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>Webservice intial</h1>
+        <h2>1. Visit <a th:href="@{/admin}">Part 1</a></h2>
+        <h2>2. Visit <a th:href="@{/user}">Part 2</a></h2>
+        <h2>3. Visit <a th:href="@{/about}">Part 3</a></h2>
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>
