@@ -1,0 +1,51 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:fragment="service-css">
+        <!-- this is header-css -->
+        <link rel="stylesheet" type="text/css"
+              href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" th:href="@{/css/index/service.css}"
+              href="../../css/index/service.css" />
+    </div>
+</head>
+<body>
+<div th:fragment="service" class="container">
+  <div class="page-header">
+    <h1 class="text-center">我们的服务</h1>
+  </div>
+  <div class="container">
+    <div class="row stylish-panel">
+      <div class="col-md-4">
+        <div>
+          <h2>留学申请</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a href="#" class="btn btn-primary" title="See more">Full Description »</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div>
+          <h2>海外游学</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a href="#" class="btn btn-primary" title="See more">Full Description »</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div>
+          <h2>求职规划</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a href="#" class="btn btn-primary" title="See more">Full Description »</a>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+<!-- /container -->
+</body>
+</html>

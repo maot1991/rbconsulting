@@ -5,14 +5,14 @@
         <link rel="stylesheet" type="text/css"
               href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 
-        <link rel="stylesheet" th:href="@{/css/main.css}"
-              href="../../css/main.css" />
+        <link rel="stylesheet" th:href="@{/css/fragments/header.css}"
+              href="../../css/fragments/header.css" />
     </div>
 </head>
 <body>
 <div th:fragment="header">
     <!-- this is header -->
-    <nav class="navbar navbar-inverse">
+    <nav id="index-navbar" class="navbar navbar-inverse navbar-static-top">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" th:href="@{/}">RBConsulting</a>
