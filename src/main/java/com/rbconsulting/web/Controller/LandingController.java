@@ -22,7 +22,7 @@ public class LandingController {
 
 	@RequestMapping("/")
 	public String landingPage(Model model) {
-		return "greetingqweqweqwd";
+		return "/index";
 	}
 
 	@RequestMapping("/index")
@@ -30,15 +30,7 @@ public class LandingController {
 		return "/index";
 	}
 
-	@GetMapping("/")
-    public String home1() {
-        return "/home";
-    }
-
-    @GetMapping("/home")
-    public String home() {
-        return "/home";
-    }
+	@RequestMapping("/staff")
 
     @GetMapping("/admin")
     public String admin() {

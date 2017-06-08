@@ -1,4 +1,4 @@
 com/rbconsulting/web/Application.class
 com/rbconsulting/web/Config/SpringSecurityConfig.class
-com/rbconsulting/web/Error/MyAccessDeniedHandler.class
 com/rbconsulting/web/Controller/LandingController.class
+com/rbconsulting/web/Error/MyAccessDeniedHandler.class
