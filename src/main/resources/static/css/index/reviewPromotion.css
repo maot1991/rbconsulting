@@ -1,0 +1,87 @@
+#reviewPromotionWrapper{
+	background: #E2E6E9;
+	padding: 62px 0 100px;
+}
+#reviewPromotion > ul,li{  
+	list-style:none;  
+}  
+#reviewPromotion > ul{  
+	overflow:hidden;  
+	padding:3em;  
+}  
+#reviewPromotion > ul li span{  
+	text-decoration:none;  
+	color:#000  ;  
+	background:#FFFACD;  
+	display:block;  
+	min-height:10em;
+	max-height: 15em;
+	padding:1em;  
+}  
+#reviewPromotion > ul li span{  
+	margin: 1em;
+	float:left;  
+/*    border: solid 2px blue;*/
+/*    white-space: nowrap;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+/*    width: 50px;*/
+}
+
+/*#reviewPromotion > ul li span:hover,ul li span:focus{  
+	-moz-box-shadow:10px 10px 7px rgba(0,0,0,.7)  ;  
+	-webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7)  ;  
+	box-shadow:10px 10px 7px rgba(0,0,0,.7)  ;  
+	-webkit-transform: scale(1.25);  
+	-moz-transform: scale(1.25);  
+	-o-transform: scale(1.25);  
+	.position:relative;  
+	z-index:5;  
+}*/
+
+#reviewPromotion > ul li:nth-child(even) span{  
+	-o-transform:rotate(4deg);  
+	-webkit-transform:rotate(4deg);  
+	-moz-transform:rotate(4deg);  
+	position:relative;  
+	top:5px;
+	background:#cfc;    
+}  
+#reviewPromotion > ul li:nth-child(3n) span{  
+	-o-transform:rotate(-3deg);  
+	-webkit-transform:rotate(-3deg);  
+	-moz-transform:rotate(-3deg);  
+	position:relative;  
+	top:-5px;
+	background:#ffc;    
+}  
+#reviewPromotion > ul li:nth-child(5n) span{  
+	-o-transform:rotate(5deg);  
+	-webkit-transform:rotate(5deg);  
+	-moz-transform:rotate(5deg);  
+	position:relative;  
+	top:-10px;
+	background:#ccf;    
+}
+
+#reviewPromotion > ul li span:hover,ul li span:focus{  
+	-moz-box-shadow:10px 10px 7px rgba(0,0,0,.7)  ;  
+	-webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7)  ;  
+	box-shadow:10px 10px 7px rgba(0,0,0,.7)  ;  
+	-webkit-transform: scale(1.25);  
+	-moz-transform: scale(1.25);  
+	-o-transform: scale(1.25);  
+	.position:relative;  
+	z-index:5;  
+}
+
+#reviewPromotion > ul li span div>* {
+	display: inline-block;
+}
+
+#reviewPromotion > ul li span div > img {
+	width:40px;
+    height:40px;
+    border-radius:50%;
+    background-position-y:25% 
+}

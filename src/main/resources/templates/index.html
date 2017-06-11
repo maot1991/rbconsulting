@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>RainbowEDU</title>
+    <meta charset="UTF-8"/>
 
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
@@ -17,20 +18,37 @@
     <div th:replace="fragments/footer :: footer-css"/>
     <div th:replace="index/carousel :: carousel-css"/>
     <div th:replace="index/service :: service-css"/>
-
+    <div th:replace="index/reviewPromotion :: reviewPromotion-css"/>
+    <div th:replace="index/mentorPromotion :: mentorPromotion-css"/>
+    <div th:replace="index/mentorRecruit :: mentorRecruit-css"/>
+    
 </head>
 <body>
 
 <div th:replace="fragments/header :: header"/>
 <div th:replace="index/carousel :: carousel"/>
 <div th:replace="index/service :: service"/>
+<div th:replace="index/reviewPromotion :: reviewPromotion"/>
+<div th:replace="index/mentorPromotion :: mentorPromotion"/>
+<div th:replace="index/mentorRecruit :: mentorRecruit"/>
 
 
 <tr th:each="mentor : ${@allMentors}">
-    <h1 th:text="${mentor}"/>
+    <h1 th:text="${mentor.getDescription()}"/>
+    <h1 th:text="${mentor.getGender()}"/>
+    <h1 th:text="${mentor.getImageUrl()}"/>
+    <tr th:each="degree : ${mentor.getMentorDegrees()}"><h6 th:text="${degree.getCollege()}"/></tr>
 </tr>
-
-
+        <form th:action="@{/login}" method="post">
+            <div><label> User Name : <input type="text" name="username"/> </label></div>
+            <div><label> Password: <input type="password" name="password"/> </label></div>
+            <div><input type="submit" value="Sign In"/></div>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
+        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
 
 <div class="container">
     <div class="starter-template">
