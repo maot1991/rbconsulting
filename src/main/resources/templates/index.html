@@ -31,36 +31,6 @@
 <div th:replace="index/reviewPromotion :: reviewPromotion"/>
 <div th:replace="index/mentorPromotion :: mentorPromotion"/>
 <div th:replace="index/mentorRecruit :: mentorRecruit"/>
-
-
-<tr th:each="mentor : ${@allMentors}">
-    <h1 th:text="${mentor.getDescription()}"/>
-    <h1 th:text="${mentor.getGender()}"/>
-    <h1 th:text="${mentor.getImageUrl()}"/>
-    <tr th:each="degree : ${mentor.getMentorDegrees()}"><h6 th:text="${degree.getCollege()}"/></tr>
-</tr>
-        <form th:action="@{/login}" method="post">
-            <div><label> User Name : <input type="text" name="username"/> </label></div>
-            <div><label> Password: <input type="password" name="password"/> </label></div>
-            <div><input type="submit" value="Sign In"/></div>
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
-
-<div class="container">
-    <div class="starter-template">
-        <h1>Webservice intial</h1>
-        <h2>1. Visit <a th:href="@{/admin}">Part 1</a></h2>
-        <h2>2. Visit <a th:href="@{/user}">Part 2</a></h2>
-        <h2>3. Visit <a th:href="@{/about}">Part 3</a></h2>
-    </div>
-
-</div>
-<!-- /.container -->
-
 <div th:replace="fragments/footer :: footer"/>
 
 </body>

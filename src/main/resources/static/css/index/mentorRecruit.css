@@ -1,5 +1,16 @@
-.recruit {
-	background: #E2E6E9;
-	padding: 162px 0 150px;
-
+#mentorRecruit {
+	background: url("https://s3.eu-central-1.amazonaws.com/siyuanrainbow/com/recruitPromotion_2.png")
+               no-repeat scroll right center #CBEDC7;
+   	background-size: 100% 100%;
+	margin-top: 30px;
+	min-height: 500px;
+	padding: 50px 0 50px;
 }
+
+#mentorRecruit #joinButton {
+	margin: 50px;
+	background: none !important;
+	color: #f0ad4e;
+	font-size: 30px;
+}
+
