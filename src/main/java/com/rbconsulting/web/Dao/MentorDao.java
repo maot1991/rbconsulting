@@ -27,8 +27,8 @@ public class MentorDao extends Dao{
 		String sql = "SELECT * FROM MentorProfile";
 
 		List<MentorProfileBean> mentorProfiles  = jdbcTemplate.query(sql,new BeanPropertyRowMapper(MentorProfileBean.class));
-		System.out.println("一二三\n");
-		System.out.println(mentorProfiles.get(0).getDescription());
+		// System.out.println("一二三\n");
+		// System.out.println(mentorProfiles.get(0).getDescription());
 //		List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
 //		for (Map row : rows) {
 ////			rows.toArray()
@@ -66,7 +66,7 @@ public class MentorDao extends Dao{
 		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		
 		columns.add(passwordEncoder.encode(user.getPassword()));
-		System.out.println("the final steps =========== xxxxxxx \n");
+		// System.out.println("the final steps =========== xxxxxxx \n");
 		jdbcTemplate.update("INSERT INTO User(email, username, phone_number, role_id, password) VALUES (?,?,?,?,?)", columns.toArray());
 		
 		return true;

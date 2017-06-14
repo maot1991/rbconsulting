@@ -47,4 +47,10 @@ public class LandingController {
         return "/admin";
     }
 
+    @GetMapping("/mentors")
+    public String mentors() {
+        return "mentor/mentorIndex";
+    }
+
+
 }
