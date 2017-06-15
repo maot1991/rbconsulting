@@ -27,12 +27,6 @@ public class MentorDao extends Dao{
 		String sql = "SELECT * FROM MentorProfile";
 
 		List<MentorProfileBean> mentorProfiles  = jdbcTemplate.query(sql,new BeanPropertyRowMapper(MentorProfileBean.class));
-		// System.out.println("一二三\n");
-		// System.out.println(mentorProfiles.get(0).getDescription());
-//		List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
-//		for (Map row : rows) {
-////			rows.toArray()
-//		}
 		return mentorProfiles;
 
 	}

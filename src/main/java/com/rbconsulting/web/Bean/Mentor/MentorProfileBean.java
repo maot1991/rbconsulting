@@ -24,7 +24,11 @@ public class MentorProfileBean {
 	}
 
 	public String getImageUrlWithHost() {
-		return "https://s3.eu-central-1.amazonaws.com/siyuanrainbow/" + this.imageUrl;
+		return "https://s3.eu-central-1.amazonaws.com/siyuanrainbow/img/mentor/img/" + this.imageUrl;
+	}
+	
+	public String getUsername(){
+		return this.username;
 	}
 	
 	public String getImageUrl(){
@@ -47,6 +51,10 @@ public class MentorProfileBean {
 		this.mentorId = mentorId;
 	}
 	
+	public void setUsername(String username){
+		this.username = username;
+	}
+	
 	public void setImageUrl(String imageUrl){
 		this.imageUrl = imageUrl;
 	}
@@ -62,7 +70,7 @@ public class MentorProfileBean {
 	public void setMentorDegrees(List<MentorDegreeBean> mentorDegrees){
 		this.mentorDegrees = mentorDegrees;
 	}
-
+	
 }
 
 //Create table MentorProfile (

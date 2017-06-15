@@ -61,6 +61,10 @@ public class MentorDegreeBean {
 	public void setStatus(int status){
 		this.status = status;
 	}
+	
+//	public String getDegreeUniversity(){
+//		return 
+//	}
 }
 
 //Create table MentorDegree (

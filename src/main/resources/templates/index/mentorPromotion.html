@@ -5,8 +5,8 @@
         <link rel="stylesheet" type="text/css"
               href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 
-        <link rel="stylesheet" th:href="@{/css/index/service.css}"
-              href="../../css/index/service.css" />
+        <link rel="stylesheet" th:href="@{/css/index/mentorPromotion.css}"
+              href="../../css/index/mentorPromotion.css" />
     </div>
 </head>
 <body>
@@ -18,8 +18,8 @@
         <div class="row stylish-panel">
             <div class="col-md-3" th:each="mentor : ${@allMentors}">
                 <div>
-                    <img th:src="${mentor.getImageUrlWithHost()}" alt="Texto Alternativo" class="img-circle img-thumbnail"/>
-                    <h2 th:text="${mentor.getGender()}"/>
+                    <img th:src="${mentor.getImageUrlWithHost()}" alt="Texto Alternativo" class="img-mentor-promotion img-circle img-thumbnail"/>
+                    <h2 th:text="${mentor.getUsername()}"/>
                     <div>
                         <div th:each="degree : ${mentor.getMentorDegrees()}">
                             <p th:text="${degree.getDegreeType()}"/>

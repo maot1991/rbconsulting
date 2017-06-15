@@ -7,9 +7,9 @@
     transform: rotate(360deg);
 }
 
-img {
-    width:200px;
-    height:200px;
+.img-mentor-promotion {
+    width:200px !important;
+    height:200px !important;
     border-radius:50%;
     display:block;
     background-position-y:25% 
