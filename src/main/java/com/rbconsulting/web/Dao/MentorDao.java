@@ -38,6 +38,13 @@ public class MentorDao extends Dao{
 		return mentorDegrees;
 	}
 	
+	public Map<Object, Map> getUniversityFullList(){
+		String sql = "SELECT * FROM University";
+		List<Map<String, Object>> list = jdbcTemplate.queryForList(sql);
+		Map<Object, Map> map = converMapListToMap(list, "id");
+		return map;
+	}
+	
 	private void createTable(){
 		jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS Users("
 				+ "id SERIAL, email VARCHAR(255), password VARCHAR(255))");
