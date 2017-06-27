@@ -70,6 +70,18 @@ public class MentorProfileBean {
 	public void setMentorDegrees(List<MentorDegreeBean> mentorDegrees){
 		this.mentorDegrees = mentorDegrees;
 	}
+
+	public MentorDegreeBean getMentorHighestDegree(){
+		MentorDegreeBean highest = null;
+		int highestType = -1;
+		for(MentorDegreeBean cur : this.mentorDegrees){
+			if (cur.getDegreeType() > highestType){
+				highest = cur;
+				highestType = cur.getDegreeType();
+			}
+		}
+		return highest;
+	}
 	
 }
 

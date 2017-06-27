@@ -1,14 +1,18 @@
 package com.rbconsulting.web.Bean.Mentor;
 
+import java.util.Map;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import com.rbconsulting.web.Service.ArrayService;
+import com.rbconsulting.web.Bean.Reference.*;
 
 @Configuration
 public class MentorDegreeBean {
 
 	private int id;
 	private int mentorId;
+	private int university;
 	private int college;
 	private int degreeType;
 	private int major;
@@ -18,11 +22,15 @@ public class MentorDegreeBean {
 		return this.id;
 	}
 	
-	public int getCollege(){
+	public int getMentorId(){
 		return this.mentorId;
 	}
+
+	public int getUniversity(){
+		return this.university;
+	}
 	
-	public int getMentorId(){
+	public int getCollege(){
 		return this.college;
 	}
 	
@@ -45,6 +53,10 @@ public class MentorDegreeBean {
 	public void setMentorId(int mentorId){
 		this.mentorId = mentorId;
 	}
+
+	public void setUniversity(int university){
+		this.university = university;
+	}
 	
 	public void setCollege(int college){
 		this.college = college;
@@ -62,6 +74,16 @@ public class MentorDegreeBean {
 		this.status = status;
 	}
 	
+//	public void getUniversityName(){
+//		System.out.println(University.test123);
+//	}
+//
+	public String getUniversityName() {
+		String name = University.getNameZH(this.id);
+		return name;
+
+     }
+//	
 //	public String getDegreeUniversity(){
 //		return 
 //	}

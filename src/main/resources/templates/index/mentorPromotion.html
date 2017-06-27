@@ -21,8 +21,9 @@
                     <img th:src="${mentor.getImageUrlWithHost()}" alt="Texto Alternativo" class="img-mentor-promotion img-circle img-thumbnail"/>
                     <h2 th:text="${mentor.getUsername()}"/>
                     <div>
-                        <div th:each="degree : ${mentor.getMentorDegrees()}">
-                            <p th:text="${degree.getDegreeType()}"/>
+                        <div th:object="${mentor.getMentorHighestDegree()}">
+
+                            <p th:text="*{getUniversityName()}"/>
                         </div>
                     </div>
                     <p th:text="${mentor.getDescription()}"/>
