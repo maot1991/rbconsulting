@@ -12,7 +12,7 @@ import com.rbconsulting.web.Dao.*;
 
 @Component
 @ComponentScan
-public class University {
+public class DegreeType {
 	private static MentorDao dao;
 	public static Map<Object, Map> fullList;
 
@@ -28,8 +28,6 @@ public class University {
 	private String nameEN;
 	@Autowired
 	private String nameZH;
-	@Autowired
-	private String countryCode;
 	
 	public static Map<Object, Map> getFullList(){
 		return fullList;
@@ -50,7 +48,7 @@ public class University {
 //	public String getCountryCode() {
 //		return this.countryCode;
 //	}
-//	
+	
 //	public void setNameZH(String nameZH) {
 //		this.nameZH = nameZH;
 //	}
