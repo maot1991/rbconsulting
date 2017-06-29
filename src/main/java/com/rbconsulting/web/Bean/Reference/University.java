@@ -21,47 +21,43 @@ public class University {
 		dao = mentorDao;
 		fullList = dao.getUniversityFullList();
 	}
-	
-	@Autowired
+  
 	private int id;
-	@Autowired
 	private String nameEN;
-	@Autowired
 	private String nameZH;
-	@Autowired
 	private String countryCode;
 	
 	public static Map<Object, Map> getFullList(){
 		return fullList;
 	}
 		
-//	public int getId() {
-//		return id;
-//	}
+	public int getId() {
+		return id;
+	}
+
+	public String getNameZH() {
+		return this.nameZH;
+	}
+
+	public String getNameEN() {
+		return this.nameEN;
+	}
+	
+	public String getCountryCode() {
+		return this.countryCode;
+	}
+	
+	public void setNameZH(String nameZH) {
+		this.nameZH = nameZH;
+	}
 //
-//	public String getNameZH() {
-//		return this.nameZH;
-//	}
-//
-//	public String getNameEN() {
-//		return this.nameEN;
-//	}
-//	
-//	public String getCountryCode() {
-//		return this.countryCode;
-//	}
-//	
-//	public void setNameZH(String nameZH) {
-//		this.nameZH = nameZH;
-//	}
-////
-//	public void setNameEN(String nameEN) {
-//		this.nameEN = nameEN;
-//	}
-//	
-//	public void setCountryCode(String countryCode) {
-//		this.countryCode = countryCode;
-//	}
+	public void setNameEN(String nameEN) {
+		this.nameEN = nameEN;
+	}
+	
+	public void setCountryCode(String countryCode) {
+		this.countryCode = countryCode;
+	}
 	
 	public static String getNameZH(int id){
 		Map map = fullList.get(id);
