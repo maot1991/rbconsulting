@@ -14,26 +14,12 @@ public class UniversityAction {
 	private static MentorDao dao;
 	public static String test = "yiyayiyayo";
 	
-	public static Map<Object, Map> fullList = dao.getUniversityFullList();
-
     @Autowired
     public void setMentorDao(MentorDao dao){
     	UniversityAction.dao = dao;
     }
   
 
-	
-//	private Map getUniversityFullList() {
-//		return dao.getUniversityFullList();
-//	}
-	
-    @Bean(name = "getUniversityNameZHById")
-	public static String getUniversityNameZHById(){
-    	int id = 15;
-		Map map = fullList.get(id);
-		System.out.println(map.keySet().toString());
-		return map.get("name_zh").toString();
-	}
 	
 	
 	

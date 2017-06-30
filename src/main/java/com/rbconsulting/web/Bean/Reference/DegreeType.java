@@ -12,14 +12,12 @@ import com.rbconsulting.web.Dao.*;
 
 @Component
 @ComponentScan
-public class University extends Reference{
-	
+public class DegreeType extends Reference{
+
 	private static Map<Object, Map> fullList;
 	
-	public University(){
-		super();
-		this.table = "University";
-		System.out.println("U Class");
+	public DegreeType(){
+		this.table = "DegreeType";
 	}
 	
 	@Override
@@ -31,14 +29,4 @@ public class University extends Reference{
 		return fullList;
 	}
 	
- 
-	private String countryCode;
-		
-	public String getCountryCode(){
-		return this.countryCode;
-	}
-	
-	public void setCountryCode(String countryCode) {
-		this.countryCode = countryCode;
-	}
 }

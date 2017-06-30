@@ -22,12 +22,12 @@
                     <h2 th:text="${mentor.getUsername()}"/>
                     <div>
                         <div th:object="${mentor.getMentorHighestDegree()}">
-
-                            <p th:text="*{getUniversityName()}"/>
+                            <p th:text="*{getUniversityName('zh')}"/>
+                            <p th:text="*{getMajorName('zh')}"/>
+                            <p th:text="*{getCollegeName('zh')}"/>
+                            <p th:text="*{getDegreeTypeName('zh')}"/>
                         </div>
                     </div>
-<!--                     <p th:text="${mentor.getDescription()}"/> -->
-<!--                     <a href="#" class="btn btn-primary" title="See more">Full Description »</a> -->
                 </div>
             </div>
         </div>

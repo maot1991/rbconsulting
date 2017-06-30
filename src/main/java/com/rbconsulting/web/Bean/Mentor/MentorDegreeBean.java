@@ -78,11 +78,26 @@ public class MentorDegreeBean {
 //		System.out.println(University.test123);
 //	}
 //
-	public String getUniversityName() {
-		String name = University.getNameZH(this.id);
+	public String getUniversityName(String lang) {
+		String name = University.getName(University.getFullList(), this.getUniversity(), lang);
 		return name;
-
-     }
+    }
+	
+	public String getDegreeTypeName(String lang) {
+		String name = DegreeType.getName(DegreeType.getFullList(), this.getDegreeType(), lang);
+		return name;
+	}
+	
+	public String getCollegeName(String lang) {
+		String name = College.getName(College.getFullList(), this.getCollege(), lang);
+		return name;
+	}
+	
+	public String getMajorName(String lang) {
+		String name = Major.getName(Major.getFullList(), this.getMajor(), lang);
+		return name;
+	}
+	
 //	
 //	public String getDegreeUniversity(){
 //		return 

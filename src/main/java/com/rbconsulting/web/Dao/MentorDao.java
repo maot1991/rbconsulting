@@ -37,14 +37,7 @@ public class MentorDao extends Dao{
 		
 		return mentorDegrees;
 	}
-	
-	public Map<Object, Map> getUniversityFullList(){
-		String sql = "SELECT * FROM University";
-		List<Map<String, Object>> list = jdbcTemplate.queryForList(sql);
-		Map<Object, Map> map = converMapListToMap(list, "id");
-		return map;
-	}
-	
+		
 	private void createTable(){
 		jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS Users("
 				+ "id SERIAL, email VARCHAR(255), password VARCHAR(255))");
@@ -67,7 +60,6 @@ public class MentorDao extends Dao{
 		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		
 		columns.add(passwordEncoder.encode(user.getPassword()));
-		// System.out.println("the final steps =========== xxxxxxx \n");
 		jdbcTemplate.update("INSERT INTO User(email, username, phone_number, role_id, password) VALUES (?,?,?,?,?)", columns.toArray());
 		
 		return true;
