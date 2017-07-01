@@ -33,8 +33,9 @@ public class UserController {
 	UserAction userAction;
 	
     @GetMapping("/login")
-    public String loginPage() {
-		return "/user/login";
+    public String loginPage(WebRequest request, Model model) {
+
+		return "/rlpage";
     }
 
   //   @GetMapping("/register")
@@ -46,7 +47,7 @@ public class UserController {
 	public String registerPage(WebRequest request, Model model) {
 	    UserDto userDto = new UserDto();
 	    model.addAttribute("user", userDto);
-	    return "/user/register";
+	    return "/rlpage";
 	}
 
 	@PostMapping("/register")

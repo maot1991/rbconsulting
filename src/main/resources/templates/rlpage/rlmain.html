@@ -1,0 +1,75 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:fragment="rlmain-css">
+        <!-- this is header-css -->
+        <link rel="stylesheet" type="text/css"
+              href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" th:href="@{/css/rlpage/rlmain.css}"
+              href="../../css/rlpage/rlmain.css" />
+        <script th:src="@{/js/rlpage/rlmain.js}"
+             src="../../js/rlpage/rlmain.js"></script>
+    </div>
+</head>
+<body>
+<div th:fragment="rlmain" class="rlmain">
+    <div class="container">
+        <img class="logoCenterImg" src="https://s3.eu-central-1.amazonaws.com/siyuanrainbow/img/com/white_logo.jpeg"/>
+
+         <div class="form">
+
+                <ul class="tab-group">
+                    <li class="tab active"><a href="#signup" data-toggle="tab"><span>Sign Up</span></a></li>
+                    <li class="tab"><a href="#login" data-toggle="tab"><span>Log In</span></a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="signup" class="tab-pane fade in active">   
+                        <form action="/" method="post">
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                <input type="text" required="required" autocomplete="off" placeholder="Username"/>
+                                </div>
+                                <div class="field-wrap">
+                                <input type="text" required="required" autocomplete="off"/>
+                                </div>
+                            </div>
+
+                            <div class="field-wrap">
+                            <input type="email" required="required" autocomplete="off"/>
+                            </div>
+
+                            <div class="field-wrap">
+                            <input type="password" required="required" autocomplete="off"/>
+                            </div>
+
+                            <button type="submit" class="button button-block">Get Started</button>
+                        </form>
+                    </div>
+
+                    <div id="login" class="tab-pane fade">   
+                        <form action="/" method="post">
+                            <div class="field-wrap">
+                                <input type="email" required="required" autocomplete="off" placeholder="username"/>
+                            </div>
+                            <div class="field-wrap">
+                                <input type="password" required="required" autocomplete="off" placeholder="password"/>
+                            </div>
+                            <div class="checkbox">
+                                 <label class="checkbox"><input class="checkbox" type="checkbox" name="check"/>Option 1</label>
+                            </div>
+                            <button class="button button-block">Log In</button>
+                            <p class="forgot"><a href="#">Forgot Password?</a></p>
+                        </form>
+
+                    </div>
+
+                </div><!-- tab-content -->
+
+            </div> <!-- /form -->
+    </div>
+</div>
+<!-- /container -->
+
+</body>
+</html>
