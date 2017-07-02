@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,47 +34,45 @@ public class UserController {
 	UserAction userAction;
 	
     @GetMapping("/login")
-    public String loginPage(WebRequest request, Model model) {
-
+    public String loginPage(WebRequest request, Model model, Error error) {
+	    UserDto userDto = new UserDto();
+	    System.out.println(error.toString());
+	    model.addAttribute("user", userDto);
+	    model.addAttribute("active", "login");
 		return "/rlpage";
     }
-
-  //   @GetMapping("/register")
-  //   public String registerPage() {
-		// return "/user/register";
-  //   }
 
     @GetMapping("/register")
 	public String registerPage(WebRequest request, Model model) {
 	    UserDto userDto = new UserDto();
 	    model.addAttribute("user", userDto);
+	    model.addAttribute("active", "register");
 	    return "/rlpage";
 	}
 
 	@PostMapping("/register")
-	public String registerUserUser(@ModelAttribute("user") @Valid UserDto userDto, BindingResult result, WebRequest request, Errors errors) {    
+	public String registerUserUser(@ModelAttribute("user") @Valid UserDto userDto, BindingResult result, WebRequest request, Errors errors, Model model) {    
 	    UserBean registered = new UserBean();
 	    if (!result.hasErrors()) {
 	        registered = userAction.registerUser(userDto);
-	        System.out.println("11111 ==== \n");
+	    } else {
 	    }
-//	    if (registered == null) {
-//	        result.rejectValue("email", "message.regError");
-//	        System.out.println("222222 ==== \n");
-//	    }
-	    System.out.println("333333 ==== \n");
-	    // rest of the implementation
-	    return "/index";
+	    if (registered == null) {
+	        result.rejectValue("email", "message.regError");
+	    }
+        if (result.hasErrors()) {
+        	 System.out.println(userDto.toString());
+        	 model.addAttribute("user", userDto);
+        	 model.addAttribute("active", "register");
+        	 model.addAttribute("notice", "Something wrong");
+        	 return "rlpage";
+        } else {
+        	model.addAttribute("user", userDto);
+        	model.addAttribute("active", "login");
+        	model.addAttribute("notice", "You've registerd, please login");
+            return "rlpage";
+        }
 	}
-	// private User createUserUser(UserDto userDto, BindingResult result) {
-	//     User registered = null;
-	//     try {
-	//         registered = service.registerNewUserUser(userDto);
-	//     } catch (EmailExistsException e) {
-	//         return null;
-	//     }    
-	//     return registered;
-	// }
 
 
 }

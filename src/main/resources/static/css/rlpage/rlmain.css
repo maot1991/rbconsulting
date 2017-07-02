@@ -59,8 +59,9 @@ a:hover {
 .form {
 /*  background: rgba(19, 35, 47, 0.9);*/
   padding: 40px;
+  padding-top: 0;
   max-width: 600px;
-  margin: 40px auto;
+  margin: 20px auto;
   border-radius: 4px;
 /*  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);*/
 }
@@ -211,7 +212,7 @@ label.checkbox {
 	margin-left: 10px;
 	color: #ffffff;
 	display: block;
-  padding-left: 15px;
+  	padding-left: 15px;
 }
 
 input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -239,4 +240,23 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 	font-size: 15px;
    color:    #ffffff;
    opacity:  0.6;
+}
+div.error {
+	margin-bottom: 0px
+}
+
+div.error p{
+	color: #ffffff;
+	text-decoration: blink;
+	font-size: 15px;
+/*	margin-bottom: 35px;*/
+}
+
+div.notice {
+	min-height: 30px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px 0 0;
+    text-decoration: blink;
 }

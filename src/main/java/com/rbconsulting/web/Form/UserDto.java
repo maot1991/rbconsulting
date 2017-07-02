@@ -3,13 +3,17 @@ package com.rbconsulting.web.Form;
 import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.rbconsulting.web.Validator.PasswordMatches;
+import com.rbconsulting.web.Validator.ValidEmail;
+
+@PasswordMatches
 public class UserDto {
-    @NotNull
-    @NotEmpty
+//    @NotNull
+//    @NotEmpty
     private String firstName;
      
-    @NotNull
-    @NotEmpty
+//    @NotNull
+//    @NotEmpty
     private String lastName;
      
     @NotNull
@@ -19,7 +23,12 @@ public class UserDto {
      
     @NotNull
     @NotEmpty
+    @ValidEmail
     private String email;
+    
+//    @NotNull
+//    @NotEmpty
+    private String phoneNumber;
 
     public String getFirstName(){
         return this.firstName;
@@ -40,6 +49,10 @@ public class UserDto {
     public String getEmail(){
         return this.email;
     }
+    
+    public String getPhoneNumber(){
+        return this.phoneNumber;
+    }
      
     public void setFirstName(String firstName){
         this.firstName = firstName;
@@ -59,5 +72,9 @@ public class UserDto {
 
     public void setEmail(String email){
         this.email = email;
+    }
+    
+    public String setPhoneNumber(){
+        return this.phoneNumber;
     }
 }
