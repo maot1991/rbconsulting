@@ -1,4 +1,4 @@
-.panel.panel-horizontal {
+/*.panel.panel-horizontal {
     display:table;
     width:100%;
 }
@@ -28,4 +28,30 @@
 
 .panels.panel.panel-horizontal .panel-heading > * {
     display: inline;
+}*/
+
+.img-circle {
+    width:200px !important;
+    height:200px !important;
+    border-radius:50%;
+    display:block;
+    background-position-y:25% 
+}
+
+.panel-heading {
+    min-height: 50px;
+}
+.panel-heading > * {
+    display: inline;
+    line-height: 30px;
+}
+
+.panel-body-section {
+    margin: 10px;
+}
+
+.mentor-service > span {
+    background: green;
+    color: white;
+    padding: 2px;
 }

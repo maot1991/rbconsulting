@@ -49,7 +49,12 @@ public class LandingController {
 
     @GetMapping("/mentors")
     public String mentors() {
-        return "mentor/mentorIndex";
+        return "/mentors";
+    }
+    
+    @GetMapping("/service")
+    public String service() {
+        return "/service";
     }
 
 

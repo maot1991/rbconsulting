@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>RainbowEDU</title>
+    <meta charset="UTF-8"/>
+    <div th:fragment="mentorindex-css">
+        <!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+    	<!-- Optional theme -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+
+    	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    	<!-- Latest compiled and minified JavaScript -->
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" th:href="@{/css/mentor/serviceindex.css}"
+          href="../../css/mentor/serviceindex.css" />
+    </div>
+</head>
+<body>
+
+<div th:fragment="serviceindex" class="container">
+    <div class="page-header">
+        <h1 class="text-center">我们的服务</h1>
+    </div>
+
+<!--     <div class="container">
+        <div class="panel panel-default panel-horizontal" th:each="mentor : ${@allMentors}">
+            <div class="panel-heading">
+                <img th:src="${mentor.getImageUrlWithHost()}" alt="Texto Alternativo" class="img-circle img-thumbnail"/>
+                <div>
+                    <h3>Carnegie Mellon University  Civil Enginerring"</h3>
+                </div>
+            </div>
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe iusto nulla molestias quis esse incidunt veritatis exercitationem dolore officiis. Nam quos iusto officiis ullam itaque voluptatum fuga assumenda culpa!</div>
+            <div class="panel-footer">Panel footer</div>
+        </div>
+    </div> -->
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <div class="box">
+                <div class="box-content">
+                    <h3 class="tag-title">单项文书</h3>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra quam sollicitudin nibh aliquam finibus. Etiam efficitur felis vel imperdiet varius. Maecenas bibendum elementum molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus finibus semper. Fusce molestie tincidunt leo vel varius. Nam scelerisque nulla feugiat leo consequat, id dignissim sem tincidunt. Proin elit mauris, hendrerit in varius sed, facilisis sit amet neque.</p>
+                    <br />
+                    <a href="ppc.html" class="btn btn-block btn-primary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="box">
+                <div class="box-content">
+                    <h3 class="tag-title">全套服务</h3>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra quam sollicitudin nibh aliquam finibus. Etiam efficitur felis vel imperdiet varius. Maecenas bibendum elementum molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus finibus semper. Fusce molestie tincidunt leo vel varius. Nam scelerisque nulla feugiat leo consequat, id dignissim sem tincidunt. Proin elit mauris, hendrerit in varius sed, facilisis sit amet neque.</p>
+                    <br />
+                    <a href="ppc.html" class="btn btn-block btn-primary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="box">
+                <div class="box-content">
+                    <h3 class="tag-title">其他服务</h3>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra quam sollicitudin nibh aliquam finibus. Etiam efficitur felis vel imperdiet varius. Maecenas bibendum elementum molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus finibus semper. Fusce molestie tincidunt leo vel varius. Nam scelerisque nulla feugiat leo consequat, id dignissim sem tincidunt. Proin elit mauris, hendrerit in varius sed, facilisis sit amet neque.</p>
+                    <br />
+                    <a href="ppc.html" class="btn btn-block btn-primary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="box">
+                <div class="box-content">
+                    <h3 class="tag-title">单项文书</h3>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra quam sollicitudin nibh aliquam finibus. Etiam efficitur felis vel imperdiet varius. Maecenas bibendum elementum molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus finibus semper. Fusce molestie tincidunt leo vel varius. Nam scelerisque nulla feugiat leo consequat, id dignissim sem tincidunt. Proin elit mauris, hendrerit in varius sed, facilisis sit amet neque.</p>
+                    <br />
+                    <a href="ppc.html" class="btn btn-block btn-primary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="box">
+                <div class="box-content">
+                    <h3 class="tag-title">全套服务</h3>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra quam sollicitudin nibh aliquam finibus. Etiam efficitur felis vel imperdiet varius. Maecenas bibendum elementum molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus finibus semper. Fusce molestie tincidunt leo vel varius. Nam scelerisque nulla feugiat leo consequat, id dignissim sem tincidunt. Proin elit mauris, hendrerit in varius sed, facilisis sit amet neque.</p>
+                    <br />
+                    <a href="ppc.html" class="btn btn-block btn-primary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="box">
+                <div class="box-content">
+                    <h3 class="tag-title">其他服务</h3>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra quam sollicitudin nibh aliquam finibus. Etiam efficitur felis vel imperdiet varius. Maecenas bibendum elementum molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus finibus semper. Fusce molestie tincidunt leo vel varius. Nam scelerisque nulla feugiat leo consequat, id dignissim sem tincidunt. Proin elit mauris, hendrerit in varius sed, facilisis sit amet neque.</p>
+                    <br />
+                    <a href="ppc.html" class="btn btn-block btn-primary">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
