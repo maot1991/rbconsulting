@@ -13,7 +13,6 @@ public class Major extends Reference {
 	
 	public Major(){
 		this.table = "Major";
-		System.out.println("Major Class");
 	}
 	
 	@Override
