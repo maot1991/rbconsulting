@@ -13,7 +13,6 @@ public class College extends Reference{
 	
 	public College(){
 		this.table = "College";
-		System.out.println("College Class");
 	}
 	
 	@Override

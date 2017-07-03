@@ -21,7 +21,6 @@ public class MentorsAction {
   	@Bean(name = "allMentors")
     public Object[] getAllMentors() {
 //  		String[] mentors = {"wkf", "zyd"};
-  		System.out.println("asdasdasdasdasd \n");
 
   		List<MentorProfileBean> objs = dao.getAllMentorProfiles();
   		for (MentorProfileBean obj : objs){

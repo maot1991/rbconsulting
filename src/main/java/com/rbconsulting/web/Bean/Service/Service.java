@@ -11,8 +11,8 @@ public class Service {
 	
 	protected int id;
 	protected int type;
-	protected String nameEN;
-	protected String nameZH;
+	protected String nameEn;
+	protected String nameZh;
 	protected String description;
 	protected int period;
 	protected int iteration;
@@ -36,24 +36,24 @@ public class Service {
 		return id;
 	}
 
-	public String getNameZH() {
-		return this.nameZH;
+	public String getNameZh() {
+		return this.nameZh;
 	}
 
-	public String getNameEN() {
-		return this.nameEN;
+	public String getNameEn() {
+		return this.nameEn;
 	}
 	
 	public void setId(int id) {
 		this.id = id;
 	}
 	
-	public void setNameZH(String nameZH) {
-		this.nameZH = nameZH;
+	public void setNameZh(String nameZh) {
+		this.nameZh = nameZh;
 	}
 //
 	public void setNameEN(String nameEN) {
-		this.nameEN = nameEN;
+		this.nameEn = nameEn;
 	}
 	
 	public static String getName(Map<Object, Map> fullList, int id, String lang) {
@@ -68,7 +68,7 @@ public class Service {
 		return value.toString();
 	}
 	
-	public List<Class> getServiceItems() {
-		return dao.groupBy("ServiceContent", this.getClass(), null);
-	}
+//	public List<Service> getServiceItems() {
+//		return dao.groupBy("ServiceContent", this.getClass(), null);
+//	}
 }

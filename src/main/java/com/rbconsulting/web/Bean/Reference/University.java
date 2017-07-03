@@ -19,7 +19,6 @@ public class University extends Reference{
 	public University(){
 		super();
 		this.table = "University";
-		System.out.println("U Class");
 	}
 	
 	@Override

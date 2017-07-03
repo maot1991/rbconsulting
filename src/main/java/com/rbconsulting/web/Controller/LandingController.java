@@ -7,6 +7,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 import javax.validation.Valid;
@@ -20,7 +21,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.rbconsulting.web.Bean.*;
+import com.rbconsulting.web.Bean.Service.ServiceType;
 import com.rbconsulting.web.Form.*;
+import com.rbconsulting.web.Action.*;
 
 // import com.rbconsulting.web.Greeting;
 
@@ -53,7 +56,10 @@ public class LandingController {
     }
     
     @GetMapping("/service")
-    public String service() {
+    public String service(Model model) {
+    	
+    	List<ServiceType> allServiceType = ServiceAction.getAllServiceType();
+    	model.addAttribute("allServiceType", allServiceType);
         return "/service";
     }
 

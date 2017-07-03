@@ -24,7 +24,6 @@ public class ReferenceDao extends Dao{
 	private JdbcTemplate jdbcTemplate;
 	
 	public Map<Object, Map> getFullList(String table){
-		System.out.println("111 = "+table);
 		String sql = "SELECT * FROM " + table;
 		List<Map<String, Object>> list = jdbcTemplate.queryForList(sql);
 		Map<Object, Map> map = converMapListToMap(list, "id");

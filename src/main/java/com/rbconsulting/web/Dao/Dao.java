@@ -14,6 +14,13 @@ public class Dao{
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
+	private static JdbcTemplate jdbcTemplateStatic;
+	
+	@Autowired 
+	public void setJdbcTemplate(JdbcTemplate tmpl){
+		jdbcTemplateStatic = tmpl;
+	}
+	
 	public Map<Object, Map> converMapListToMap(List<Map<String, Object>> raw, String pk){
 		Map<Object, Map> map = new HashMap<Object, Map>();
 		
@@ -31,24 +38,27 @@ public class Dao{
 	};
 	
 	public Map<Object, Map> getFullList(String table){
-		System.out.println("111 = "+table);
 		String sql = "SELECT * FROM " + table;
 		List<Map<String, Object>> list = jdbcTemplate.queryForList(sql);
 		Map<Object, Map> map = converMapListToMap(list, "id");
 		return map;
 	}
 	
-	public List<Class> getFullListForClass(String table, Class c){
+	public <T> List<T> getFullListForClass(String table, Class<T> c){
 		String sql = "SELECT * FROM " + table;
 
-		List<Class> fullList  = jdbcTemplate.query(sql,new BeanPropertyRowMapper(c));
+		List<T> fullList  = new ArrayList<T>();
+		fullList = jdbcTemplate.query(sql,new BeanPropertyRowMapper(c));
 		return fullList;
 	}
 	
-	public List<Class> groupBy(String table, Class c, Map condition){
+	public static <T> List<T> groupBy(String table, Class<T> c, Map condition){
 		String sql = "SELECT * FROM " + table;
 		String whereClause = "";
+		System.out.println(condition.size());
+		
 		for (Object key : condition.keySet()){
+			System.out.println(key.toString());
 			if (whereClause.length() == 0){
 				whereClause += " WHERE ";
 			}else {
@@ -56,8 +66,11 @@ public class Dao{
 			}
 			whereClause = whereClause + key + " = " + condition.get(key);
 		}
-
-		List<Class> fullList  = jdbcTemplate.query(sql,new BeanPropertyRowMapper(c));
+		
+		sql += whereClause;
+		
+		List<T> fullList = new ArrayList<T>();
+		fullList  = jdbcTemplateStatic.query(sql,new BeanPropertyRowMapper(c));
 		return fullList;
 	}
 	
