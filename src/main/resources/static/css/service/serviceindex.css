@@ -1,23 +1,26 @@
 body {
     background: #f2f2f2;
-	width: 100%;
+/* 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 95px 0;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
+	font-weight: 200; */
 }
 
-.row-no-gutter {
+/* .row-no-gutter {
 	margin-right: 0;
 	margin-left: 0;
-}
+} */
 
-.row-no-gutter [class*="col-"] {
+/* .row-no-gutter [class*="col-"] {
 	padding-right: 0;
 	padding-left: 0;
-}
+} */
 
+.boxes {
+	text-align:center;
+}
 
 #card {
 	background: #fff;
@@ -207,8 +210,27 @@ figure {
 	margin-top: 10px;
 }
 
+.day h3 {
+	font-size: 10px;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+.day h16 {
+	font-size: 8px;
+	text-transform: uppercase;
+/* 	margin-top: 10px; */
+}
+
 .day svg {
 	color: #000;
 	width: 32px;
 	height: 32px;
+}
+
+.justify-content-center {
+	-webkit-box-pack: center!important;
+    -webkit-justify-content: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
 }

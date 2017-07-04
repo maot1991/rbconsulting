@@ -55,10 +55,8 @@ public class Dao{
 	public static <T> List<T> groupBy(String table, Class<T> c, Map condition){
 		String sql = "SELECT * FROM " + table;
 		String whereClause = "";
-		System.out.println(condition.size());
 		
 		for (Object key : condition.keySet()){
-			System.out.println(key.toString());
 			if (whereClause.length() == 0){
 				whereClause += " WHERE ";
 			}else {

@@ -1,10 +1,12 @@
 package com.rbconsulting.web.Bean.Service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.rbconsulting.web.Dao.Dao;
 import com.rbconsulting.web.Dao.ServiceDao;
 
 public class Service {
@@ -68,7 +70,19 @@ public class Service {
 		return value.toString();
 	}
 	
-//	public List<Service> getServiceItems() {
-//		return dao.groupBy("ServiceContent", this.getClass(), null);
-//	}
+	public List<ServiceContent> getServiceItems() {
+		Map<Object, Object> map = new HashMap<Object, Object>();
+		map.put("service_id", this.id);
+		return (List<ServiceContent>) ServiceDao.groupBy("ServiceContent", ServiceContent.class, map);
+	}
+	
+	public List<ServicePrice> getServicePrice() {
+		Map<Object, Object> map = new HashMap<Object, Object>();
+		map.put("service_id", this.id);
+		List<ServicePrice> res = ServiceDao.groupBy("ServicePrice", ServicePrice.class, map);
+		if (res == null){
+			System.out.println("nullnullnull");
+		}
+		return res;
+	}
 }
