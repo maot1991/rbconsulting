@@ -1,25 +1,28 @@
-body {
-    background: #f2f2f2;
-/* 	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 95px 0;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200; */
-}
+.recruitindex {
+	min-height: 1200px;
+	background-image:    url(https://s3.eu-central-1.amazonaws.com/siyuanrainbow/img/com/rl_bg.jpg);
+	  /* Location of the image */
+/*	background-image: url(images/background-photo.jpg);*/
 
-/* .row-no-gutter {
-	margin-right: 0;
-	margin-left: 0;
-} */
+	/* Image is centered vertically and horizontally at all times */
+	background-position: center center;
 
-/* .row-no-gutter [class*="col-"] {
-	padding-right: 0;
-	padding-left: 0;
-} */
+	/* Image doesn't repeat */
+	background-repeat: no-repeat;
 
-.box-content {
-	background: #ffffff;
+	/* Makes the image fixed in the viewport so that it doesn't move when 
+	 the content height is greater than the image height */
+	background-attachment: fixed;
+
+	/* This is what makes the background image rescale based on its container's size */
+	background-size: cover;
+
+	/* Pick a solid background color that will be displayed while the background image is loading */
+	background-color:#464646;
+
+	/* SHORTHAND CSS NOTATION
+	* background: url(background-photo.jpg) center center cover no-repeat fixed;
+	*/
 }
 
 #card {

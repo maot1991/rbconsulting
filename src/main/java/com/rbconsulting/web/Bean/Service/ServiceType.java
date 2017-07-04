@@ -19,16 +19,12 @@ import com.rbconsulting.web.Dao.ServiceDao;
 
 @Component
 @ComponentScan
-@Configurable(preConstruction = true, autowire = Autowire.BY_NAME)
-@EnableAutoConfiguration
-@EnableSpringConfigured
-@Configuration
-@Scope(value="prototype")
 public class ServiceType {
 	private static String tableName;
 	private int id;
 	private String nameZh;
 	private String nameEn;
+	private String description;
 	private static List<ServiceType> fullList;
 	
 	@Autowired
@@ -56,12 +52,20 @@ public class ServiceType {
 		return this.nameEn;
 	}
 	
+	public String getDescription(){
+		return this.description;
+	}
+	
 	public void setId(int id) {
 		this.id = id;
 	}
 	
 	public void setNameZh(String nameZh) {
 		this.nameZh = nameZh;
+	}
+	
+	public void setDescription(String description){
+		this.description = description;
 	}
 //
 	public void setNameEn(String nameEn) {

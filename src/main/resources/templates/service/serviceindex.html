@@ -20,25 +20,20 @@
 <body>
 
 <div th:fragment="serviceindex" class="container">
-    <div class="page-header">
-        <h1 class="text-center">我们的服务</h1>
-    </div>
-
     <div class="row">
         <div class="col-md-3 text-center" th:each="serviceType : ${allServiceType}">
             <div class="box">
                 <div class="box-content">
                     <h3 class="tag-title" th:text="${serviceType.getNameZh()}"/>
-                    <hr />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra quam sollicitudin nibh aliquam finibus. Etiam efficitur felis vel imperdiet varius. Maecenas bibendum elementum molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus finibus semper. Fusce molestie tincidunt leo vel varius. Nam scelerisque nulla feugiat leo consequat, id dignissim sem tincidunt. Proin elit mauris, hendrerit in varius sed, facilisis sit amet neque.</p>
-                    <br />
-                    <a href="ppc.html" class="btn btn-block btn-primary">Learn more</a>
+                    <p th:text="${serviceType.getDescription()}"/>
                 </div>
             </div>
         </div>
     </div>
-    <div class="page-header" th:each="serviceType : ${allServiceType}">
-        <h3 class="text-center" th:text="${serviceType.getNameZh()}"/>
+    <div th:each="serviceType : ${allServiceType}">
+        <div class="page-header">
+            <h2 class="text-center" th:text="${serviceType.getNameZh()}"/>
+        </div>
         <div class="row justify-content-center">
 	        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" th:each="service : ${serviceType.getAllTypeService()}">
 	                <div id="card" class="weater">
@@ -107,7 +102,7 @@
 						</div> -->
 	                    <div class="days">
 	                        <div class="row row-no-gutter">
-	                            <div class="col-md-4" th:each="price : ${service.getServicePrice()}">
+	                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" th:each="price : ${service.getServicePrice()}">
 	                                <div class="day">
 	                                    <h1 th:text="${price.getPriceTypeDisplay()}"/>
 	    								<h3 th:text="${price.getBasePriceDisplay()}"/>

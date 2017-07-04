@@ -62,6 +62,15 @@ public class LandingController {
     	model.addAttribute("allServiceType", allServiceType);
         return "/service";
     }
+    
+    @GetMapping("/recruit")
+    public String recruit(Model model) {
+    	
+//    	List<ServiceType> allServiceType = ServiceAction.getAllServiceType();
+//    	model.addAttribute("allServiceType", allServiceType);
+        return "/recruit";
+    }
+
 
 
 }
