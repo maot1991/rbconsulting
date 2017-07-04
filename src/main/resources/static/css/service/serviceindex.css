@@ -18,9 +18,6 @@ body {
 	padding-left: 0;
 } */
 
-.boxes {
-	text-align:center;
-}
 
 #card {
 	background: #fff;
@@ -88,7 +85,7 @@ article {
 	align-self: auto;
 }
 
-.info .city:after {
+/* .info .city:after {
 	content: '';
 	width: 15px;
 	height: 2px;
@@ -97,7 +94,7 @@ article {
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 10px;
-}
+} */
 
 .city span {
 	color: #fff;
@@ -132,7 +129,7 @@ article {
 
 
 .temp {
-	font-size: 73px;
+	font-size: 15px;
 	display: block;
 	position: relative;
 	font-weight: bold;

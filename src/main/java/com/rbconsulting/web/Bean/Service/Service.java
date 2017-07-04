@@ -19,10 +19,17 @@ public class Service {
 	protected int period;
 	protected int iteration;
 	protected String depth;
+	private List<ServiceContent> serviceContents;
+	private List<ServicePrice> servicePrice;
 	
 	protected static ServiceDao dao;
 	private static Map<Object, Map> fullList;
 	protected String table;
+	
+	public void fleshen(){
+		this.serviceContents = getServiceContent();
+		this.servicePrice = getServicePrice();
+	}
 	
 	@Autowired
 	public void setStaticMembers(ServiceDao serviceDao){
@@ -46,6 +53,10 @@ public class Service {
 		return this.nameEn;
 	}
 	
+	public String getDescription(){
+		return this.description;
+	}
+	
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -56,6 +67,10 @@ public class Service {
 //
 	public void setNameEN(String nameEN) {
 		this.nameEn = nameEn;
+	}
+	
+	public void setDescription(String description){
+		this.description = description;
 	}
 	
 	public static String getName(Map<Object, Map> fullList, int id, String lang) {
@@ -70,7 +85,7 @@ public class Service {
 		return value.toString();
 	}
 	
-	public List<ServiceContent> getServiceItems() {
+	public List<ServiceContent> getServiceContent() {
 		Map<Object, Object> map = new HashMap<Object, Object>();
 		map.put("service_id", this.id);
 		return (List<ServiceContent>) ServiceDao.groupBy("ServiceContent", ServiceContent.class, map);

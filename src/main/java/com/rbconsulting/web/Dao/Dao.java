@@ -72,5 +72,23 @@ public class Dao{
 		return fullList;
 	}
 	
+//	public static <T> getSingle(String table, Class<T> c, Map condition){
+//		String sql = "SELECT * FROM " + table;
+//		String whereClause = "";
+//		
+//		for (Object key : condition.keySet()){
+//			if (whereClause.length() == 0){
+//				whereClause += " WHERE ";
+//			}else {
+//				whereClause += " AND ";
+//			}
+//			whereClause = whereClause + key + " = " + condition.get(key);
+//		}
+//		
+//		sql += whereClause;
+//		
+//		T obj = jdbcTemplateStatic.queryForObject(sql,ParameterizedBeanPropertyRowMapper.newInstance(c));
+//	}
+	
 	
 }
