@@ -1,0 +1,63 @@
+.aboutindex {
+	min-height: 1200px;
+	/*background-image:    url(https://s3.eu-central-1.amazonaws.com/siyuanrainbow/img/com/rl_bg.jpg);*/
+	  /* Location of the image */
+/*	background-image: url(images/background-photo.jpg);*/
+
+	/* Image is centered vertically and horizontally at all times */
+	background-position: center center;
+
+	/* Image doesn't repeat */
+	background-repeat: no-repeat;
+
+	/* Makes the image fixed in the viewport so that it doesn't move when 
+	 the content height is greater than the image height */
+	background-attachment: fixed;
+
+	/* This is what makes the background image rescale based on its container's size */
+	background-size: cover;
+
+/*	 Pick a solid background color that will be displayed while the background image is loading 
+	background-color:#464646;*/
+
+	/* SHORTHAND CSS NOTATION
+	* background: url(background-photo.jpg) center center cover no-repeat fixed;
+	*/
+}
+.row-block {
+	margin: 50px 0;
+}
+
+.row-block:last-child {
+	margin-bottom: 50px;
+}
+
+.info-panel {
+	background-color: #12c7c7;
+	margin: 50px 0;
+	padding: 50px;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+
+.info-panel .intro {
+	font-size: 18px;
+}
+
+.img-panel {
+	text-align: center;
+}
+
+.img-panel .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.img-panel img {
+	width: 315px;
+	height: 400px;
+	margin: 40px auto 0;
+	vertical-align: middle;
+}
+
