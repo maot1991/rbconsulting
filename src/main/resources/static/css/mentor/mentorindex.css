@@ -1,34 +1,15 @@
-/*.panel.panel-horizontal {
-    display:table;
-    width:100%;
-}
-.panel.panel-horizontal > .panel-heading, .panel.panel-horizontal > .panel-body, .panel.panel-horizontal > .panel-footer {
-    display:table-cell;
-}
-.panel.panel-horizontal > .panel-heading, .panel.panel-horizontal > .panel-footer {
-    width: 25%;
-    border:0;
-    vertical-align: middle;
-}
-.panel.panel-horizontal > .panel-heading {
-    border-right: 1px solid #ddd;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 4px;
-}
-.panel.panel-horizontal > .panel-footer {
-    border-left: 1px solid #ddd;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 4px;
+img.square {
+    width: 100% !important;
 }
 
-.panels.panel.panel-horizontal img {
-    width: 100px;
-    height: 100px;
+div.card {
+    margin: 15px auto;
 }
 
-.panels.panel.panel-horizontal .panel-heading > * {
-    display: inline;
-}*/
+.card-title {
+    margin: 0 0 10px;
+    color: #12c7c7;
+}
 
 .img-circle {
     width:200px !important;
@@ -38,8 +19,19 @@
     background-position-y:25% 
 }
 
+.mentorbox {
+    border: 1px solid #c6c6c6;
+    border-radius: 3px;
+    padding: 15px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom:3px solid #feba02;
+}
+
 .panel-heading {
-    min-height: 50px;
+    min-height: 15px;
 }
 .panel-heading > * {
     display: inline;
@@ -50,8 +42,37 @@
     margin: 10px;
 }
 
-.mentor-service > span {
-    background: green;
+.mentor-service > button {
+    background: #12c7c7;
     color: white;
-    padding: 2px;
+    font-size: 10px;
+}
+
+a.readmore {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #12c7c7;
+    color:#ffffff;
+}
+
+.card-review {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    color:#e2aa11;
+    font-size: 20px;
+    font-style: bold;
+}
+
+.degree-line {
+    margin-top: 5px;
+}
+
+.short-desc {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    color: #e2aa11;
 }
