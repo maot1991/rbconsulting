@@ -10,77 +10,71 @@
     </div>
 </head>
 <body>
-<div th:fragment="reviewPromotion" id="reviewPromotionWrapper">
-    <div id="reviewPromotion" class="container">
-        <div class="page-header">
-            <h1 class="text-center">我们的评价</h1>
-        </div>
-        <ul>  
-            <li class="col-md-4">
-                <span>
-                    <div>
-                        <img src="  https://s3.eu-central-1.amazonaws.com/siyuanrainbow/images.jpeg" class="img-circle img-thumbnail"/>
-                        <p>老五</p>
-                    </div>
-                    <p>最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!</p>
-                </span>
-            </li>
-                        <li class="col-md-4">
-                <span>
-                    <div>
-                        <img src="  https://s3.eu-central-1.amazonaws.com/siyuanrainbow/images.jpeg" class="img-circle img-thumbnail"/>
-                        <p>老五</p>
-                    </div>
-                    <p>最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!</p>
-                </span>
-            </li>
-                        <li class="col-md-4">
-                <span>
-                    <div>
-                        <img src="  https://s3.eu-central-1.amazonaws.com/siyuanrainbow/images.jpeg" class="img-circle img-thumbnail"/>
-                        <p>老五</p>
-                    </div>
-                    <p>最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!</p>
-                </span>
-            </li>
-                        <li class="col-md-4">
-                <span>
-                    <div>
-                        <img src="  https://s3.eu-central-1.amazonaws.com/siyuanrainbow/images.jpeg" class="img-circle img-thumbnail"/>
-                        <p>老五</p>
-                    </div>
-                    <p>最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!</p>
-                </span>
-            </li>
-                        <li class="col-md-4">
-                <span>
-                    <div>
-                        <img src="  https://s3.eu-central-1.amazonaws.com/siyuanrainbow/images.jpeg" class="img-circle img-thumbnail"/>
-                        <p>老五</p>
-                    </div>
-                    <p>最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!</p>
-                </span>
-            </li>
-                        <li class="col-md-4">
-                <span>
-                    <div>
-                        <img src="  https://s3.eu-central-1.amazonaws.com/siyuanrainbow/images.jpeg" class="img-circle img-thumbnail"/>
-                        <p>老五</p>
-                    </div>
-                    <p>最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!</p>
-                </span>
-            </li>
-                        <li class="col-md-4">
-                <span>
-                    <div>
-                        <img src="  https://s3.eu-central-1.amazonaws.com/siyuanrainbow/images.jpeg" class="img-circle img-thumbnail"/>
-                        <p>老五</p>
-                    </div>
-                    <p>最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!最近咋没有美女发帖呢？我一定给个头条推荐,recommend!recommend!</p>
-                </span>
-            </li>
-        </ul>
-    </div> 
+<div th:fragment="reviewPromotion">
+	<section id="index-review">    				
+		<div class="container">
+	        <h1 class="text-center">我们的评价</h1>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+<!-- 	                <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div> -->
+					<div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+					  <!-- Carousel indicators -->
+	                  <ol class="carousel-indicators">
+					    <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+					    <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+					    <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+					  </ol>
+					  <!-- Carousel items -->
+					  <div class="carousel-inner">
+				          <div class="item active">
+				            <blockquote>
+				              <div class="row">
+<!-- 				                <div class="col-sm-3 text-center">
+				                  <img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif"/>
+				                  <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">
+				                </div> -->
+				                <div class="col-sm-12 review-text">
+				                  <p>文书质量真心不错，卖家人也特别好，基本我的要求都尽量帮我满足，我这么麻烦的一个人，效率特别高，基本能很快就很快帮你搞定，总之是很让人感动。</p>
+				                </div>
+				                <small>Anonymous</small>
+				              </div>
+				            </blockquote>
+				          </div>
+				          <div class="item">
+				            <blockquote>
+				              <div class="row">
+<!-- 				                <div class="col-sm-3 text-center">
+				                  <img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif"/>
+				                  <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">
+				                </div> -->
+				                <div class="col-sm-12 review-text">
+				                  <p>性价比还挺高的，学长推荐的机构，的确眼光犀利，老师完全可以把我的中文材料的核心一字不漏的全部转变成包含情感的地道英语。天，这才是大神啊！！！膜拜，膜拜。</p>
+				                  
+				                </div>
+				                <small>Someone famous</small>
+				              </div>
+				            </blockquote>
+				          </div>
+				          <div class="item">
+				            <blockquote>
+				              <div class="row">
+<!-- 				                <div class="col-sm-3 text-center">
+				                  <img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif"/>
+				                  <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">
+				                </div> -->
+				                <div class="col-sm-12 review-text">
+				                  <p>特意等到申请做完才来评价哒，因此给到大家的都是真实的感受。首先，客服老师非常热情，态度很好，第一时间帮忙安排咨询老师，很感谢。接下来就说说我的申请体验，开始是咨询MAX老师非常专业，对英国留学很有经验，给我选择的五所学校层次分明且尊重我的个人意愿一起商量，针对我的意向精挑细选专业，很感动。接着是文案ALICE老师，材料指导方面没得说，文书指导专业且到位，帮我梳理活动经历组织文书脉络，后面的其他申请材料也是非常认真负责一遍遍指导修改问题，现在我已经成功拿到一个offer啦，很感谢老师们，继续等待其他的结果喽。</p>
+				                </div>
+				                <small>Someone famous</small>
+				              </div>
+				            </blockquote>
+				          </div>
+					  </div>
+					</div>
+				</div>							
+			</div>
+		</div>
+	</section>
 </div>
 <!-- /container -->
 </body>

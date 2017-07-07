@@ -29,7 +29,7 @@
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			<div class="item" th:each="content : ${@carouselContents}" th:classappend="${content.get('active')} == 1 ? active">
-				<img class="first-slide" th:src="${content.get('img')}"/>
+<!-- 				<img class="first-slide" th:src="${content.get('img')}"/> -->
 				<div class="container">
 					<div class="carousel-caption">
 						<h1 th:text="${content.get('title')}"/>

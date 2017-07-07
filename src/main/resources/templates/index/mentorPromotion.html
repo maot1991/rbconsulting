@@ -16,7 +16,7 @@
     </div>
     <div class="container">
         <div class="row stylish-panel">
-            <div class="col-md-3" th:each="mentor : ${@allMentors}">
+            <div class="col-md-3" th:each="mentor : ${@getPromotedMentors}">
                 <div>
                     <img th:src="${mentor.getImageUrlWithHost()}" alt="Texto Alternativo" class="img-mentor-promotion img-circle img-thumbnail"/>
                     <h2 th:text="${mentor.getUsername()}"/>

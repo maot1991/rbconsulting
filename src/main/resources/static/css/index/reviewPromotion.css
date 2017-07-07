@@ -1,87 +1,140 @@
-#reviewPromotionWrapper{
-	background: #E2E6E9;
+/* #reviewPromotionWrapper{
 	padding: 62px 0 100px;
-}
-#reviewPromotion > ul,li{  
-	list-style:none;  
-}  
-#reviewPromotion > ul{  
-	overflow:hidden;  
-	padding:3em;  
-}  
-#reviewPromotion > ul li span{  
-	text-decoration:none;  
-	color:#000  ;  
-	background:#FFFACD;  
-	display:block;  
-	min-height:10em;
-	max-height: 15em;
-	padding:1em;  
-}  
-#reviewPromotion > ul li span{  
-	margin: 1em;
-	float:left;  
-/*    border: solid 2px blue;*/
-/*    white-space: nowrap;*/
-    overflow: hidden;
-    text-overflow: ellipsis;
-/*    width: 50px;*/
+} */
+
+/*-------------------------------*/
+/*      Code snippet by          */
+/*      @maridlcrmn              */
+/*-------------------------------*/
+
+
+#index-review {
+	margin: 20px 0;
+	background-color:#e2aa11;
+	padding: 20px 0;
+	color:white;
 }
 
-/*#reviewPromotion > ul li span:hover,ul li span:focus{  
-	-moz-box-shadow:10px 10px 7px rgba(0,0,0,.7)  ;  
-	-webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7)  ;  
-	box-shadow:10px 10px 7px rgba(0,0,0,.7)  ;  
-	-webkit-transform: scale(1.25);  
-	-moz-transform: scale(1.25);  
-	-o-transform: scale(1.25);  
-	.position:relative;  
-	z-index:5;  
-}*/
-
-#reviewPromotion > ul li:nth-child(even) span{  
-	-o-transform:rotate(4deg);  
-	-webkit-transform:rotate(4deg);  
-	-moz-transform:rotate(4deg);  
-	position:relative;  
-	top:5px;
-	background:#cfc;    
-}  
-#reviewPromotion > ul li:nth-child(3n) span{  
-	-o-transform:rotate(-3deg);  
-	-webkit-transform:rotate(-3deg);  
-	-moz-transform:rotate(-3deg);  
-	position:relative;  
-	top:-5px;
-	background:#ffc;    
-}  
-#reviewPromotion > ul li:nth-child(5n) span{  
-	-o-transform:rotate(5deg);  
-	-webkit-transform:rotate(5deg);  
-	-moz-transform:rotate(5deg);  
-	position:relative;  
-	top:-10px;
-	background:#ccf;    
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-#reviewPromotion > ul li span:hover,ul li span:focus{  
-	-moz-box-shadow:10px 10px 7px rgba(0,0,0,.7)  ;  
-	-webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7)  ;  
-	box-shadow:10px 10px 7px rgba(0,0,0,.7)  ;  
-	-webkit-transform: scale(1.25);  
-	-moz-transform: scale(1.25);  
-	-o-transform: scale(1.25);  
-	.position:relative;  
-	z-index:5;  
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-#reviewPromotion > ul li span div>* {
-	display: inline-block;
+/*-------------------------------*/
+/*    Carousel Fade Transition   */
+/*-------------------------------*/
+
+#fade-quote-carousel.carousel {
+  padding-bottom: 60px;
+}
+#fade-quote-carousel.carousel .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-inner .active {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-indicators {
+  bottom: 10px;
+}
+#fade-quote-carousel.carousel .carousel-indicators > li {
+  background-color: white;
+  border: none;
+}
+#fade-quote-carousel blockquote {
+    text-align: center;
+    border: none;
+}
+#fade-quote-carousel .profile-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 100px;
 }
 
-#reviewPromotion > ul li span div > img {
-	width:40px;
-    height:40px;
-    border-radius:50%;
-    background-position-y:25% 
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px 0px 0px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 100px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+.review-text {
+	  height: 80px;
+	  font-size: 14px;
+/* 	  line-height: 21px; */
+	  overflow: hidden;
+/* 	  border: 1px solid #000; */
+	  text-overflow: ellipsis;
+/* 	  white-space: nowrap; */
 }

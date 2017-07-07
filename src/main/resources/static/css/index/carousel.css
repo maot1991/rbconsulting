@@ -1,4 +1,45 @@
-.carousel img {
-	min-width:100%;
-	max-height: 500px;
+.carousel-inner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
+
+.carousel-inner {
+	position: relative;
+}
+
+#myCarousel {
+	height : 500px;
+}
+
+#myCarousel .carousel-inner .item {
+    width: 100%;
+    height: 500px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+
+	/* Image doesn't repeat */
+	background-repeat: no-repeat;
+
+	/* Pick a solid background color that will be displayed while the background image is loading */
+	background-color:#464646;
+
+	/* SHORTHAND CSS NOTATION
+	* background: url(background-photo.jpg) center center cover no-repeat fixed;
+	*/
+}
+
+#myCarousel .carousel-inner .item:first-child {
+	background-image: url(https://s3.eu-central-1.amazonaws.com/siyuanrainbow/img/com/index/carousel/carousel_0.jpg);
+}
+#myCarousel .carousel-inner .item:nth-child(2) {
+	background-image: url(https://s3.eu-central-1.amazonaws.com/siyuanrainbow/img/com/index/carousel/carousel_1.jpg);
+}
+#myCarousel .carousel-inner .item:nth-child(3) {
+	background-image: url(https://s3.eu-central-1.amazonaws.com/siyuanrainbow/img/com/index/carousel/carousel_2.jpg);
 }

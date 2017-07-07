@@ -33,6 +33,21 @@ public class MentorsAction {
 //        return mentors;
     }
   	
+  	@Bean(name = "getPromotedMentors")
+    public Object[] getPromotedMentors() {
+//  		String[] mentors = {"wkf", "zyd"};
+
+  		List<MentorProfileBean> objs = dao.getPromotedMentorProfiles();
+  		for (MentorProfileBean obj : objs){
+  			List<MentorDegreeBean> degrees = dao.getMentorDegrees(obj.getMentorId());
+  			obj.setMentorDegrees(degrees);
+  		}
+  		
+  		return objs.toArray();
+//  		System.out.println("asdasdgdfhjhkghjkghjkhjkhj \n");
+//        return mentors;
+    }
+  	
   	public void getMentorsBy(){
   		
   	}

@@ -31,6 +31,14 @@ public class MentorDao extends Dao{
 
 	}
 	
+	public List<MentorProfileBean> getPromotedMentorProfiles(){
+		String sql = "SELECT * FROM MentorProfile limit 4";
+
+		List<MentorProfileBean> mentorProfiles  = jdbcTemplate.query(sql,new BeanPropertyRowMapper(MentorProfileBean.class));
+		return mentorProfiles;
+
+	}
+	
 	public List<MentorDegreeBean> getMentorDegrees(int mentorId){
 		String sql = "SELECT * FROM MentorDegree WHERE mentor_id = ?";
 		List<MentorDegreeBean> mentorDegrees  = jdbcTemplate.query(sql,new BeanPropertyRowMapper(MentorDegreeBean.class), mentorId);
