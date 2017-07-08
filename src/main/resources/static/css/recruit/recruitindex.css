@@ -1,6 +1,7 @@
 .recruitindex {
+	padding-top: 100px;
 	min-height: 1200px;
-	background-image:    url(https://s3.eu-central-1.amazonaws.com/siyuanrainbow/img/com/rl_bg.jpg);
+	background-image:    url(https://s3.eu-central-1.amazonaws.com/siyuanrainbow/img/com/recruitbg2.jpg);
 	  /* Location of the image */
 /*	background-image: url(images/background-photo.jpg);*/
 
@@ -25,215 +26,155 @@
 	*/
 }
 
-#card {
-	background: #fff;
-	position: relative;
-
-	-webkit-box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
-	-moz-box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
-	box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
-
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-ms-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;	
+.riinfo {
+	color: white;
+/*	background-color: rgba(143,188,143,0.2);*/
 }
 
-.city-selected {
-	position: relative;
-	overflow: hidden;
-	min-height: 200px;
-	background: #3D6AA2;
-}
-
-article {
-	position: relative;
-	z-index: 2;
-	color: #fff;
-	padding: 20px;
-
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	flex-direction: row;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	-webkit-align-content: flex-start;
-	-ms-flex-line-pack: start;
-	align-content: flex-start;
-	-webkit-align-items: flex-start;
-	-ms-flex-align: start;
-	align-items: flex-start;
-}
-
-.info .city,
-.night {
-	font-size: 24px;
-	font-weight: 200;
-	position: relative;
-
-
-	-webkit-order: 0;
-	-ms-flex-order: 0;
-	order: 0;
-	-webkit-flex: 0 1 auto;
-	-ms-flex: 0 1 auto;
-	flex: 0 1 auto;
-	-webkit-align-self: auto;
-	-ms-flex-item-align: auto;
-	align-self: auto;
-}
-
-/* .info .city:after {
-	content: '';
-	width: 15px;
-	height: 2px;
-	background: #fff;
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	margin-left: 10px;
-} */
-
-.city span {
-	color: #fff;
-	font-size: 13px;
-	font-weight: bold;
-
-	text-transform: lowercase;
-	text-align: left;
-}
-
-.night {
+.rlinfo-detail {
 	font-size: 15px;
-	text-transform: uppercase;
+	padding-left: 20px;
 }
 
-.icon {
-	width: 84px;
-	height: 84px;
-	-webkit-order: 0;
-	-ms-flex-order: 0;
-	order: 0;
-	-webkit-flex: 0 0 auto;
-	-ms-flex: 0 0 auto;
-	flex: 0 0 auto;
-	-webkit-align-self: center;
-	-ms-flex-item-align: center;
-	align-self: center;
-
-	overflow: visible;
-
+.riinfoheader {
+	color: white;
+	margin-bottom: 0;
 }
 
-
-.temp {
-	font-size: 15px;
-	display: block;
-	position: relative;
-	font-weight: bold;
+.riinfowhy {
+	margin: 0;
+	color: lightgray;
 }
 
-svg {
-	color: #fff;
-	fill: currentColor;
+.riinfocond {
+	color: lightgray;
 }
 
-
-.wind svg {
-	width: 18px;
-	height: 18px;
-	margin-top: 20px;
-	margin-right: 10px;
-	vertical-align: bottom;
+.riinfoflow {
+	color: lightgray;
 }
 
-.wind span {
-	font-size: 13px;
-	text-transform: uppercase;
+.in-page {
+    min-height: 520px;
 }
 
-.city-selected:hover figure {
-	opacity: 0.4;
+.main {
+    position: relative;
 }
 
+a {
+    color: #1b5a7c;
+}
 
-figure {
+a:hover, a:focus {
+    color: #1b5a7c;
+}
+
+.btn-cyan {
+    background-color: #1b5a7c;
+    color: #fff;
+}
+
+.btn-cyan:hover {
+    color: #fff;
+    opacity: 0.9;
+}
+
+.form-control:focus {
+    border-color: #ffffff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(24, 204, 162, 0.6);
+    outline: 0 none;
+}
+
+.min-height {
+    min-height: 380px;
+}
+
+.login-screen {
+    background-image: url(https://www.squiz.net/__public/Systems/Perspective/FileCache/1-32000/465/prop/header-bg-image.jpg?t=1472431690);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.login-screen:before {
+    content: "";
+    background: rgba(0,0,0, 0.5);
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
-    left: 0;
     top: 0;
-    background-position: center;
-    background-size: cover;
-    opacity: 0.1;
-    z-index: 1;
-
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    left: 0;
 }
 
-.days .row [class*="col-"]:nth-child(2) .day  {
-    border-width: 0 1px 0 1px;
-    border-style: solid;
-    border-color: #eaeaea;
+.login-center {
+    text-align: left;
 }
 
-.days .row [class*="col-"] {
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-ms-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;	
+.login {
+    width: 320px;
+    color: #fff;
 }
 
-.days .row [class*="col-"]:hover{
-	background: #eaeaea;
+.login .login-form {
+    text-align: left;
 }
 
-.day {
-	padding: 10px 0px;
-	text-align: center;
-
+.login label {
+    color: #fff;
 }
 
-.day h1 {
-	font-size: 14px;
-	text-transform: uppercase;
-	margin-top: 10px;
+.login-form .input-group .form-control {
+    background: none;
+    height: 44px;
+    color: #ddd;
 }
 
-.day h3 {
-	font-size: 10px;
-	text-transform: uppercase;
-	margin-top: 10px;
+.login-form .input-group .input-group-addon {
+    background: none;
 }
 
-.day h16 {
-	font-size: 8px;
-	text-transform: uppercase;
-/* 	margin-top: 10px; */
+.login-form .input-group .input-group-addon .glyphicon {
+    color: #1b5a7c;
 }
 
-.day svg {
-	color: #000;
-	width: 32px;
-	height: 32px;
+.login-form .input-group .form-control::-moz-placeholder {
+    color: #fff;
+    opacity: 0.3;
 }
 
-.justify-content-center {
-	-webkit-box-pack: center!important;
-    -webkit-justify-content: center!important;
-    -ms-flex-pack: center!important;
-    justify-content: center!important;
+.login .sign-btn input.btn {
+    background: #1b5a7c;
+    border-color: #ffffff;
+    color: #fff;
+    width: 180px;
+}
+
+.login .sign-btn a {
+    text-decoration: none;
+}
+
+.login .checkbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login .forgot {
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.logoCenterImg{
+	width: 150px;
+	height: 188px;
+    display: block;
+    margin: 50px auto 0;
 }

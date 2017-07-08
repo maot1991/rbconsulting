@@ -1,9 +1,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <div th:fragment="mentorPromotion-css">
-        <!-- this is header-css -->
-        <link rel="stylesheet" type="text/css"
-              href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 
         <link rel="stylesheet" th:href="@{/css/index/mentorPromotion.css}"
               href="../../css/index/mentorPromotion.css" />
@@ -16,7 +13,42 @@
     </div>
     <div class="container">
         <div class="row stylish-panel">
-            <div class="col-md-3" th:each="mentor : ${@getPromotedMentors}">
+            <div class="col-md-3 col-sm-6" th:each="mentor : ${@getPromotedMentors}">
+                 <div class="card-container manual-flip mppanel">
+                    <div class="card">
+                        <div class="front">
+                            <div class="cover">
+                                <img src="https://www.clipartsgram.com/image/124089475-california-beaches-tumblr-wallpaper-3.jpg"/>
+                            </div>
+                            <div class="user">
+                                <img class="img-circle" th:src="${mentor.getImageUrlWithHost()}"/>
+                            </div>
+                            <div class="content">
+                                <div class="main" th:object="${mentor.getMentorHighestDegree()}">
+                                    <h3 class="name" th:text="${mentor.getUsername()}"/>
+                                    <p class="profession" th:text="'导师'"/>
+                                    <button class="btn btn-sm mptag">留学申请</button>
+                                    <button class="btn btn-sm mptag">选校定位</button>
+                                    <button class="btn btn-sm mptag">求职规划</button>
+                                    <p class="text-center mpinfo">
+                                        <span th:if="*{getMajor() != 0}" th:text="*{getMajorName('zh')}"/>
+                                        <span th:if="*{getCollege() != 0}" th:text="*{getCollegeName('zh')}"/>
+                                        <span th:text="*{getDegreeTypeName('zh')}"/>
+                                        <br/>
+                                        <span th:text="*{getUniversityName('zh')}"/>
+                                    </p>
+                                </div>
+                                <div class="mpfooter">
+                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                        <i class="fa fa-mail-forward"></i> 导师详情
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- end front panel -->
+                    </div> <!-- end card -->
+                </div> <!-- end card-container -->
+            </div> <!-- end col sm 3 -->
+<!--             <div class="col-md-3" th:each="mentor : ${@getPromotedMentors}">
                 <div>
                     <img th:src="${mentor.getImageUrlWithHost()}" alt="Texto Alternativo" class="img-mentor-promotion img-circle img-thumbnail"/>
                     <h2 th:text="${mentor.getUsername()}"/>
@@ -29,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="col-md-offset-4 col-md-4">
