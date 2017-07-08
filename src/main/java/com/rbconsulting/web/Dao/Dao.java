@@ -72,6 +72,18 @@ public class Dao{
 		return fullList;
 	}
 	
+	public static <T> T queryByColumn(String table, Class<T> c, String column, int id){
+		String sql = "SELECT * FROM " + table + " WHERE " + column + " = " + id;
+
+		List<T> fullList = new ArrayList<T>();
+		fullList  = jdbcTemplateStatic.query(sql,new BeanPropertyRowMapper(c));
+		if (fullList.size() == 0){
+			return null;
+		}
+		return fullList.get(0);
+	}
+	
+	
 //	public static <T> getSingle(String table, Class<T> c, Map condition){
 //		String sql = "SELECT * FROM " + table;
 //		String whereClause = "";

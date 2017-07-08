@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>RainbowEDU</title>
+    <meta charset="UTF-8"/>
+    <div th:fragment="mentorindex-css">
+        <!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+    	<!-- Optional theme -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+
+    	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    	<!-- Latest compiled and minified JavaScript -->
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <div th:replace="fragments/header :: header-css"/>
+        <div th:replace="fragments/footer :: footer-css"/>
+        <link rel="stylesheet" th:href="@{/css/mentor/mentor.css}"
+          href="../../css/mentor/mentor.css" />
+    </div>
+</head>
+<body>
+<div th:replace="fragments/header :: header"/>
+<div th:fragment="mentor" class="container">
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object dp img-circle" th:src="${mentor.getImageUrlWithHost()}" style="width: 100px;height:100px;"/>
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading" th:text="${mentor.getUsername()}"><small> India</small></h4>
+                    <h5>Software Developer at <a href="http://gridle.in">Gridle.in</a></h5>
+                    <hr style="margin:8px auto"/>
+
+                    <span class="label label-default">HTML5/CSS3</span>
+                    <span class="label label-default">jQuery</span>
+                    <span class="label label-info">CakePHP</span>
+                    <span class="label label-default">Android</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h2>教育经历<i class="fa fa-graduation-cap"></i></h2>
+            </div>
+            <div class="col-lg-offset-2">
+                <div th:each="degree : ${mentor.getMentorDegrees()}">
+                    <div class="col-lg-3">
+                        <h4 th:text="${degree.getDegreeTypeName('zh')}"/>
+                    </div>
+                    <div>
+                        <h5 th:text="${degree.getMajorName('en')}"/>
+                        <h5 th:text="${degree.getUniversityName('en')}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h2>导师介绍</h2>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h2>用户评价</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div th:replace="fragments/footer :: footer"/>
+
+
+</body>
+</html>

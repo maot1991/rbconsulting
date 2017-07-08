@@ -98,7 +98,7 @@ public class ServicePrice {
 	public String getBasePriceDisplay(){
 		String valuePart = "";
 		if ("USD".equals(this.currency)){
-			valuePart += "$"+this.basePrice;
+			valuePart += "$"+(int)this.basePrice;
 		}else {
 			valuePart += currency + this.basePrice;
 		}
@@ -112,7 +112,7 @@ public class ServicePrice {
 		if (this.extraPrice <= 0){
 			return "";
 		}
-		String valuePart = "";
+		String valuePart = "超出部分 ";
 		if ("USD".equals(this.currency)){
 			valuePart += "$"+this.extraPrice;
 		}else {

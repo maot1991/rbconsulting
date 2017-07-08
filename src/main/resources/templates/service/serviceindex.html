@@ -20,7 +20,7 @@
 <body>
 
 <div th:fragment="serviceindex" class="container">
-    <div class="row">
+<!--     <div class="row">
         <div class="col-md-3 text-center" th:each="serviceType : ${allServiceType}">
             <div class="box">
                 <div class="box-content">
@@ -29,20 +29,19 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div th:each="serviceType : ${allServiceType}">
         <div class="page-header">
             <h2 class="text-center" th:text="${serviceType.getNameZh()}"/>
+            <h5 class="text-center" th:text="${serviceType.getDescription()}"/>
         </div>
         <div class="row justify-content-center">
-	        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" th:each="service : ${serviceType.getAllTypeService()}">
+	        <div class="col-sm-12 col-xs-12" th:each="service,iterStat : ${serviceType.getAllTypeService()}" th:classappend="${iterStat.even and iterStat.last} ? 'col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8' : 'col-lg-6 col-md-6'">
 	                <div id="card" class="weater">
-	                    <div class="city-selected">
+	                    <div class="city-selected" th:classappend="'servicetype-' + ${serviceType.getId()}">
 	                        <article>
 	                            <div class="info">
 	                                <div class="city" th:text="${service.getNameZh()}" />
-	                                <div class="night">Night - 22:07 PM</div>
-	
 	                                <div class="temp">
 	                              		<div th:each="serviceContent : ${service.getServiceContent()}">
 	                              			<div th:if="${serviceContent.getServiceItem()} != null" th:object="${serviceContent.getServiceItem()}">
@@ -95,14 +94,14 @@
 	                            </div>
 	                        </article>
 	                        
-	                        <figure style="background-image: url(http://136.243.1.253/~creolitic/bootsnipp/home.jpg)"></figure>
+	                        <figure></figure>
 	                    </div>
 <!-- 						<div th:each="price : ${service.getServiceItems()}">
 							<p>11</p>
 						</div> -->
 	                    <div class="days">
 	                        <div class="row row-no-gutter">
-	                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" th:each="price : ${service.getServicePrice()}">
+	                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 price-box" th:each="price : ${service.getServicePrice()}">
 	                                <div class="day">
 	                                    <h1 th:text="${price.getPriceTypeDisplay()}"/>
 	    								<h3 th:text="${price.getBasePriceDisplay()}"/>
