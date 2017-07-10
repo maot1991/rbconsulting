@@ -11,4 +11,4 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/rbconsulting-1.0-SNAPSHOT.jar
+    - siyuanrainbow/rbconsulting-1.0-SNAPSHOT.jar
