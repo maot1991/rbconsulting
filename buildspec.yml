@@ -11,5 +11,4 @@ phases:
       - mvn package
 artifacts:
   files:
-    - '**/*'
-  base-directory: 'target/web-0.1.0.war'
+    - 'target/web-0.1.0.war'
