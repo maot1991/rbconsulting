@@ -322,3 +322,8 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
         visibility: visible;
     }
 }
+
+.all-mentor-btn {
+    background-color: #12c7c7;
+    color: white;
+}

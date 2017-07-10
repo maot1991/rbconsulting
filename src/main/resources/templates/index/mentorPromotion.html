@@ -39,9 +39,9 @@
                                     </p>
                                 </div>
                                 <div class="mpfooter">
-                                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                                    <a class="btn btn-simple" th:href="'/mentor/' + ${mentor.getMentorId()}">
                                         <i class="fa fa-mail-forward"></i> 导师详情
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div> <!-- end front panel -->
@@ -65,7 +65,7 @@
         </div>
     </div>
     <div class="col-md-offset-4 col-md-4">
-        <a th:href="@{/}" class="btn btn-info btn-lg btn-block" role="button">查看所有导师</a>
+        <a href="/mentors" class="btn btn-lg btn-block all-mentor-btn" role="button">查看所有导师</a>
     </div>
 </div>
 <!-- /container -->

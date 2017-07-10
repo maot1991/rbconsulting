@@ -16,3 +16,11 @@
     transition: 0.5s;
     cursor: pointer;
 }
+
+a.service-link {
+    color: #666;
+}
+
+a.service-link:hover {
+    color: #666;
+}
